@@ -3,15 +3,19 @@ package com.restapi.service;
 import com.restapi.dao.DummyPersonDao;
 import com.restapi.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
+@Service
 public class PersonService {
 
     @Autowired
+    @Qualifier("dummyPersonDao")
     private DummyPersonDao dummyPersonDao;
 
 
-    void addPerson(Person person) {
-        dummyPersonDao.savePerson(person);
+    public int addPerson(Person person) {
+        return dummyPersonDao.savePerson(person);
     }
 
 
