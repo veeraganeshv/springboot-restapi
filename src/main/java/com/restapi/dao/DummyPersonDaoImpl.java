@@ -1,11 +1,13 @@
 package com.restapi.dao;
 
 import com.restapi.model.Person;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+@Repository("dummyPersonDao")
 public class DummyPersonDaoImpl implements DummyPersonDao {
 
     private static List<Person> personList = new ArrayList<>();
