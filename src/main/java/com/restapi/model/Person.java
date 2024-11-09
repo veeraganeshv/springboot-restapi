@@ -1,17 +1,24 @@
 package com.restapi.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.UUID;
 
 public class Person {
 
+    @JsonProperty("id")
     UUID id;
 
+    @JsonProperty("name")
     String name;
 
+    @JsonProperty("job")
     String job;
 
+    @JsonProperty("hasHome")
     boolean hasHome;
 
+    @JsonProperty("address")
     String address;
 
     public Person(UUID id, String name, String job, boolean hasHome, String address) {
