@@ -3,16 +3,13 @@ package com.restapi.api;
 import com.restapi.model.Person;
 import com.restapi.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("v1/api/")
+@RequestMapping("v1/api/person")
 public class PersonController {
 
 
@@ -20,7 +17,7 @@ public class PersonController {
     private PersonService personService;
 
     @PostMapping
-    public String addPerson(Person person) {
+    public String addPerson(@RequestBody Person person) {
         personService.addPerson(person);
         return "added";
     }
