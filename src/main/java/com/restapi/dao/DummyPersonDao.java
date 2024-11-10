@@ -16,8 +16,8 @@ public interface DummyPersonDao {
         person.setJob(String.valueOf(jobs[randomNum]));
         person.setHasHome(randomNum % 2 == 0);
         person.setAddress("DISTRICT 1");
-        System.out.println(person);
         return savePerson(id, person);
     }
 
+    List<Person> getAllPeople();
 }

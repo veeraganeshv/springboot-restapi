@@ -5,7 +5,6 @@ import com.restapi.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -24,8 +23,7 @@ public class PersonController {
 
     @GetMapping
     public List<Person> getPerson() {
-
-        return new ArrayList<>();
+        return personService.getAllPeople();
     }
 
 }

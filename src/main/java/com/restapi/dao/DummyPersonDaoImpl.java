@@ -17,4 +17,9 @@ public class DummyPersonDaoImpl implements DummyPersonDao {
         personList.add(new Person(id, person.getName(), person.getJob(), person.isHasHome(), person.getAddress()));
         return 1;
     }
+
+    @Override
+    public List<Person> getAllPeople() {
+        return personList;
+    }
 }
