@@ -27,7 +27,7 @@ public class PersonController {
     }
 
     @DeleteMapping
-    public String deletePerson() {
+    public String deletePerson(@RequestParam String id) {
         return "deleted successfully";
     }
 
