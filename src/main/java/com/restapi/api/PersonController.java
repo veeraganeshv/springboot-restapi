@@ -30,5 +30,4 @@ public class PersonController {
     public String deletePerson(@RequestParam String id) {
         return "deleted successfully";
     }
-
 }
