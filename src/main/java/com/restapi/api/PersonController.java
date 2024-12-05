@@ -30,4 +30,8 @@ public class PersonController {
     public String deletePerson(@RequestParam String id) {
         return "deleted successfully";
     }
+
+    public String updatePerson() {
+        return "Successfully Updated";
+    }
 }
